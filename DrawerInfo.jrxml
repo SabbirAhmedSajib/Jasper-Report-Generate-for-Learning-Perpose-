@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DrawerInfo" pageWidth="842" pageHeight="595" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="918f71b3-601e-4fe9-89bc-a5f6fd8c5481">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ORACLE DB"/>
+	<parameter name="BranchCode" class="java.lang.String"/>
+	<parameter name="LCKRID" class="java.lang.String"/>
+	<parameter name="sSubReportPath" class="java.lang.String">
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT BRANNM FROM LSBANINF WHERE BRANCD = $P{BranchCode}]]>
+	</queryString>
+	<field name="BRANNM" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="BRANNM"/>
+		<property name="com.jaspersoft.studio.field.label" value="BRANNM"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<staticText>
+				<reportElement x="300" y="-20" width="200" height="40" uuid="fc9d0db6-1b24-4b5f-8627-dc41e06bad25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="25" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bank Asia]]></text>
+			</staticText>
+			<textField pattern="MMM d, yyyy h:mm:ss a">
+				<reportElement x="300" y="50" width="200" height="20" uuid="271eb6ea-b1c4-41c7-b50b-17db2d5ed3bb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="20" width="200" height="30" uuid="1646a901-a8fa-4b55-9d42-0b1f856c73eb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BRANNM}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame">
+				<reportElement x="20" y="-20" width="120" height="120" uuid="3bb4ab36-94c8-4272-bdac-0e370f405681"/>
+				<imageExpression><![CDATA["./bankasia_Image.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="-20" y="0" width="842" height="34" backcolor="#F5F6F7" uuid="91b12bbb-19b9-4dd0-8807-489c0973acdc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Drawer Information]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<subreport overflowType="Stretch">
+				<reportElement x="0" y="0" width="800" height="25" uuid="3b5c81b0-2233-408e-a30a-11982db1109f"/>
+				<subreportParameter name="LCKRID">
+					<subreportParameterExpression><![CDATA[$P{LCKRID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="sSubReportPath">
+					<subreportParameterExpression><![CDATA[$P{sSubReportPath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["./Locker_Info.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<subreport isUsingCache="false" runToBottom="false" overflowType="Stretch">
+				<reportElement positionType="Float" x="0" y="0" width="800" height="22" uuid="51f060fd-54a4-445f-8333-b209471eae76"/>
+				<subreportParameter name="LCKRID">
+					<subreportParameterExpression><![CDATA[$P{LCKRID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="sSubReportPath">
+					<subreportParameterExpression><![CDATA[$P{sSubReportPath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["./DrawerList.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<summary>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="700" y="0" width="100" height="20" uuid="9c9a89d9-72f6-44a2-a21c-52c75c8e1041"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="260" height="20" uuid="ca7a2fde-7383-4f58-a58c-010c5c415f18"/>
+				<box leftPadding="15"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[@Powered By  ERA-InfoTech Ltd.]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

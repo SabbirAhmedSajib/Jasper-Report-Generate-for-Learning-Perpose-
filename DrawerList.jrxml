@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DrawerList" pageWidth="842" pageHeight="595" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="846a51b9-aa5e-425d-864e-833ab7b010a9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ORACLE DB"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="LCKRID" class="java.lang.String"/>
+	<parameter name="sSubReportPath" class="java.lang.String">
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT D."DRWRID" DRAWER_ID,
+	D."LCKRID" LOCKER,
+	D."DRWRTYP" DRAWER_TYPE,
+	D."DIMENTION" DRAWER_DIMENTION,
+	TO_CHAR( D."NUMOFKEY") TOTAL_KEY,
+	TO_CHAR( D."CHARGEGL") CHARGE_AMOUNT,
+	TO_CHAR( D."VATGL") VAT_AMOUNT,
+	D."BOKFLG" BOOKING,
+	A."ACTNUM" ACCOUNT_NUMBER,
+	A."ACTTIT" ACCOUNT_TITLE,
+	TO_CHAR( A."ALLOCATDATE") ALLOCATE_DATE,
+	TO_CHAR( A."EXPDATE") EXPIRE_DATE
+FROM "LSDRAWER" D,
+	"LSDRWRALLOCAT" A
+WHERE 
+	 D."LCKRID" = $P{LCKRID} 
+	 AND D."DRWRID" = A."DRWRID" (+)]]>
+	</queryString>
+	<field name="DRAWER_ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="DRAWER_ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="DRAWER_ID"/>
+	</field>
+	<field name="LOCKER" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="LOCKER"/>
+		<property name="com.jaspersoft.studio.field.label" value="LOCKER"/>
+	</field>
+	<field name="DRAWER_TYPE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="DRAWER_TYPE"/>
+		<property name="com.jaspersoft.studio.field.label" value="DRAWER_TYPE"/>
+	</field>
+	<field name="DRAWER_DIMENTION" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="DRAWER_DIMENTION"/>
+		<property name="com.jaspersoft.studio.field.label" value="DRAWER_DIMENTION"/>
+	</field>
+	<field name="TOTAL_KEY" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TOTAL_KEY"/>
+		<property name="com.jaspersoft.studio.field.label" value="TOTAL_KEY"/>
+	</field>
+	<field name="CHARGE_AMOUNT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CHARGE_AMOUNT"/>
+		<property name="com.jaspersoft.studio.field.label" value="CHARGE_AMOUNT"/>
+	</field>
+	<field name="VAT_AMOUNT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="VAT_AMOUNT"/>
+		<property name="com.jaspersoft.studio.field.label" value="VAT_AMOUNT"/>
+	</field>
+	<field name="BOOKING" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="BOOKING"/>
+		<property name="com.jaspersoft.studio.field.label" value="BOOKING"/>
+	</field>
+	<field name="ACCOUNT_NUMBER" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ACCOUNT_NUMBER"/>
+		<property name="com.jaspersoft.studio.field.label" value="ACCOUNT_NUMBER"/>
+	</field>
+	<field name="ACCOUNT_TITLE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ACCOUNT_TITLE"/>
+		<property name="com.jaspersoft.studio.field.label" value="ACCOUNT_TITLE"/>
+	</field>
+	<field name="ALLOCATE_DATE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ALLOCATE_DATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="ALLOCATE_DATE"/>
+	</field>
+	<field name="EXPIRE_DATE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="EXPIRE_DATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="EXPIRE_DATE"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="180" height="20" backcolor="#E3E1E1" uuid="a4464dda-f0f2-4e7e-9f84-d86636fcb59e"/>
+				<box leftPadding="10"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Drawer Information]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="100" height="40" uuid="69e860a5-a03b-4129-baad-835bdf365de9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="11337218-6cef-4cc7-8f9a-da1f27a6a567"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[DRAWER_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="100" y="0" width="60" height="40" uuid="40d852af-fa6f-4b7b-9e67-8479bbf73355">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88d7a972-2307-4d67-b1eb-d7c98c036999"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[DRAWER_TYPE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="160" y="0" width="100" height="40" uuid="a14f390c-7ad0-435d-b1af-56cb9680dde2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0730ff80-6aeb-45f5-a491-38dc81e97e0c"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[DRAWER_DIMENTION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="260" y="0" width="50" height="40" uuid="567b6615-1235-4d52-8945-f06127d84f34">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c52abaf3-3b3a-4601-a007-d79acbf7aca2"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[TOTAL_KEY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="310" y="0" width="60" height="40" uuid="7566b8aa-f263-415e-8a40-ba955897f681">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b0ec89f5-1ba3-478e-98c1-edc5cd250aaa"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[CHARGE_AMOUNT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="370" y="0" width="79" height="40" uuid="db4be7df-bf52-4e2f-a76b-cc23f344ab3a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="881dcbc5-2671-45d3-b36b-2af2a81dc587"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[VAT_AMOUNT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="449" y="0" width="111" height="40" uuid="f1ecfebb-c77d-4c1c-a8f2-f243721a697e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fc4e9b37-0360-489c-a772-5d17173eeb6f"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ACCOUNT_NUMBER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="560" y="0" width="100" height="40" uuid="97e4707b-9a9f-43a4-87e3-ebd35ad6a007">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8fa3f9d5-453f-4b46-a23c-e409e7967aaf"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ACCOUNT_TITLE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="660" y="0" width="70" height="40" uuid="28166ad7-67c9-40bf-a2cc-68bb20ff70c5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="17ba01d9-2dc0-4145-836b-90154cc36a9e"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ALLOCATE_DATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="730" y="0" width="80" height="40" uuid="a1a3d6b9-0700-46c7-944f-fbf150a62069">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="46911f82-8466-413a-a3c9-c9fe99d4072b"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[EXPIRE_DATE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="100" height="30" uuid="a66337b4-caf0-43a1-a5e7-743c5d041fc1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="11337218-6cef-4cc7-8f9a-da1f27a6a567"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{DRAWER_ID}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="100" y="0" width="60" height="30" uuid="27735a97-e305-4a7d-80c5-b5b26550ad3e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88d7a972-2307-4d67-b1eb-d7c98c036999"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{DRAWER_TYPE}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="160" y="0" width="100" height="30" uuid="36e45e05-bee4-4dcb-bafa-5ffdfd37cf47">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0730ff80-6aeb-45f5-a491-38dc81e97e0c"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{DRAWER_DIMENTION}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="260" y="0" width="50" height="30" uuid="6b3481d8-6ae5-46b6-b15a-b0fc446fe8e8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c52abaf3-3b3a-4601-a007-d79acbf7aca2"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{TOTAL_KEY}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="310" y="0" width="60" height="30" uuid="eb8c4bb6-8a9b-4b46-999c-95aefb9ef566">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b0ec89f5-1ba3-478e-98c1-edc5cd250aaa"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{CHARGE_AMOUNT}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="370" y="0" width="79" height="30" uuid="93d8f02c-137e-4a4c-88d3-306be6b1b1e0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="881dcbc5-2671-45d3-b36b-2af2a81dc587"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{VAT_AMOUNT}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="449" y="0" width="111" height="30" uuid="e1388707-361b-4b8d-86d6-c5163fd0ead6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fc4e9b37-0360-489c-a772-5d17173eeb6f"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ACCOUNT_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="560" y="0" width="100" height="30" uuid="85e94477-fca2-4934-bb61-6be0d157fd05">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8fa3f9d5-453f-4b46-a23c-e409e7967aaf"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ACCOUNT_TITLE}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="660" y="0" width="70" height="30" uuid="0a638695-576d-4393-a72f-fbb32ee795f7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="17ba01d9-2dc0-4145-836b-90154cc36a9e"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ALLOCATE_DATE}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="730" y="0" width="80" height="30" uuid="d405c260-5ceb-4a2f-9e4c-e7f0f83980a9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="46911f82-8466-413a-a3c9-c9fe99d4072b"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{EXPIRE_DATE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

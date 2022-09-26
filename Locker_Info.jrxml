@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Locker_Info" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d016f507-8e25-4b22-822c-89bdca0abf56">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ORACLE DB"/>
+	<parameter name="LCKRID" class="java.lang.String"/>
+	<parameter name="sSubReportPath" class="java.lang.String">
+		<defaultValueExpression><![CDATA["./"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT L.LCKRID LOCKER,
+       L.LCKRNAM LOCKER_NAME,
+       L.NUMOFDRWR TOTAL_DRAWER,
+       B.BRDTIT BRAND_TITLE,
+       V.VENTIT VENDOR_TITLE
+       
+  FROM LSLKRSPEC L,
+       LSBRAND B,
+       LSVENDOR V
+ WHERE     L.APPFLG = 'Y'
+       AND B.BRDCOD = L.BRANDCOD
+       AND L.VENCOD = V.VENCOD
+       AND L.LCKRID = $P{LCKRID}]]>
+	</queryString>
+	<field name="LOCKER" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="LOCKER"/>
+		<property name="com.jaspersoft.studio.field.label" value="LOCKER"/>
+	</field>
+	<field name="LOCKER_NAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="LOCKER_NAME"/>
+		<property name="com.jaspersoft.studio.field.label" value="LOCKER_NAME"/>
+	</field>
+	<field name="TOTAL_DRAWER" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="TOTAL_DRAWER"/>
+		<property name="com.jaspersoft.studio.field.label" value="TOTAL_DRAWER"/>
+	</field>
+	<field name="BRAND_TITLE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="BRAND_TITLE"/>
+		<property name="com.jaspersoft.studio.field.label" value="BRAND_TITLE"/>
+	</field>
+	<field name="VENDOR_TITLE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="VENDOR_TITLE"/>
+		<property name="com.jaspersoft.studio.field.label" value="VENDOR_TITLE"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="180" height="20" backcolor="#E3E1E1" uuid="e8fae334-5ae9-4720-8810-5b1ee9f4c2b9"/>
+				<box leftPadding="10"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Locker Information]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="0" width="100" height="30" backcolor="#EBEBEB" uuid="0b8fe501-ab8a-425d-b848-4a14fa5220ed">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="48840a3f-0ff3-4639-97ca-9cdfa05384e8"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="5">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[LOCKER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="100" y="0" width="100" height="30" backcolor="#EBEBEB" uuid="0062d28d-6676-4813-9b4f-323a4b1f7416">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="12f857ea-cbbb-4097-9a93-36d45fe3aa86"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="5">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[LOCKER_NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="200" y="0" width="100" height="30" backcolor="#EBEBEB" uuid="fb4fc924-01e7-4577-b904-51ff1596070b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="69b67ccb-4f5d-4d56-865f-233e7af8bb1e"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="5">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[TOTAL_DRAWER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="300" y="0" width="100" height="30" backcolor="#EBEBEB" uuid="4ec1763c-eb9b-4dba-bafe-eeb12ecad670">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ba78b18a-6c28-402d-97b5-b454ca41436f"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="5">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[BRAND_TITLE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="400" y="0" width="100" height="30" backcolor="#EBEBEB" uuid="f4a3712a-ed10-4d37-957c-820373e13db6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e2bb744f-f055-4a7c-806a-d24441012ba8"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="5">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[VENDOR_TITLE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="100" height="30" uuid="0a54c547-45c7-4a6f-975c-0ebfac78b46f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="48840a3f-0ff3-4639-97ca-9cdfa05384e8"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="5">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{LOCKER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="100" y="0" width="100" height="30" uuid="3c4f5461-376c-4437-9442-0057cdfcdac0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="12f857ea-cbbb-4097-9a93-36d45fe3aa86"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="5">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{LOCKER_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="200" y="0" width="100" height="30" uuid="4a4858cb-ba24-4724-a3d5-ed04da22a3e3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="69b67ccb-4f5d-4d56-865f-233e7af8bb1e"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="5">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{TOTAL_DRAWER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="300" y="0" width="100" height="30" uuid="49c74bc5-9f23-41ac-b914-579862b9d566">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ba78b18a-6c28-402d-97b5-b454ca41436f"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="5">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{BRAND_TITLE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="400" y="0" width="100" height="30" uuid="535275ed-22fa-43e3-9163-1cd99c36ec80">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e2bb744f-f055-4a7c-806a-d24441012ba8"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="5">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{VENDOR_TITLE}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="0" width="500" height="30" uuid="44edb9d3-4c08-44d9-9588-316bd7110c29"/>
+			</rectangle>
+		</band>
+	</detail>
+</jasperReport>
