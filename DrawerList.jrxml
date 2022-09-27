@@ -101,7 +101,7 @@ WHERE
 	<columnHeader>
 		<band height="40" splitType="Stretch">
 			<staticText>
-				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="100" height="40" uuid="69e860a5-a03b-4129-baad-835bdf365de9">
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="0" width="80" height="40" backcolor="#E3E1E1" uuid="69e860a5-a03b-4129-baad-835bdf365de9">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="11337218-6cef-4cc7-8f9a-da1f27a6a567"/>
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 				</reportElement>
@@ -112,7 +112,7 @@ WHERE
 				<text><![CDATA[DRAWER_ID]]></text>
 			</staticText>
 			<staticText>
-				<reportElement stretchType="RelativeToTallestObject" x="100" y="0" width="60" height="40" uuid="40d852af-fa6f-4b7b-9e67-8479bbf73355">
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="80" y="0" width="60" height="40" backcolor="#E3E1E1" uuid="40d852af-fa6f-4b7b-9e67-8479bbf73355">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88d7a972-2307-4d67-b1eb-d7c98c036999"/>
 				</reportElement>
 				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
@@ -122,7 +122,7 @@ WHERE
 				<text><![CDATA[DRAWER_TYPE]]></text>
 			</staticText>
 			<staticText>
-				<reportElement stretchType="RelativeToTallestObject" x="160" y="0" width="100" height="40" uuid="a14f390c-7ad0-435d-b1af-56cb9680dde2">
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="140" y="0" width="90" height="40" backcolor="#E3E1E1" uuid="a14f390c-7ad0-435d-b1af-56cb9680dde2">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0730ff80-6aeb-45f5-a491-38dc81e97e0c"/>
 				</reportElement>
 				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
@@ -132,7 +132,7 @@ WHERE
 				<text><![CDATA[DRAWER_DIMENTION]]></text>
 			</staticText>
 			<staticText>
-				<reportElement stretchType="RelativeToTallestObject" x="260" y="0" width="50" height="40" uuid="567b6615-1235-4d52-8945-f06127d84f34">
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="230" y="0" width="50" height="40" backcolor="#E3E1E1" uuid="567b6615-1235-4d52-8945-f06127d84f34">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c52abaf3-3b3a-4601-a007-d79acbf7aca2"/>
 				</reportElement>
 				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
@@ -142,7 +142,7 @@ WHERE
 				<text><![CDATA[TOTAL_KEY]]></text>
 			</staticText>
 			<staticText>
-				<reportElement stretchType="RelativeToTallestObject" x="310" y="0" width="60" height="40" uuid="7566b8aa-f263-415e-8a40-ba955897f681">
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="280" y="0" width="60" height="40" backcolor="#E3E1E1" uuid="7566b8aa-f263-415e-8a40-ba955897f681">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b0ec89f5-1ba3-478e-98c1-edc5cd250aaa"/>
 				</reportElement>
 				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
@@ -152,7 +152,7 @@ WHERE
 				<text><![CDATA[CHARGE_AMOUNT]]></text>
 			</staticText>
 			<staticText>
-				<reportElement stretchType="RelativeToTallestObject" x="370" y="0" width="79" height="40" uuid="db4be7df-bf52-4e2f-a76b-cc23f344ab3a">
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="340" y="0" width="79" height="40" backcolor="#E3E1E1" uuid="db4be7df-bf52-4e2f-a76b-cc23f344ab3a">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="881dcbc5-2671-45d3-b36b-2af2a81dc587"/>
 				</reportElement>
 				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
@@ -162,7 +162,7 @@ WHERE
 				<text><![CDATA[VAT_AMOUNT]]></text>
 			</staticText>
 			<staticText>
-				<reportElement stretchType="RelativeToTallestObject" x="449" y="0" width="111" height="40" uuid="f1ecfebb-c77d-4c1c-a8f2-f243721a697e">
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="419" y="0" width="112" height="40" backcolor="#E3E1E1" uuid="f1ecfebb-c77d-4c1c-a8f2-f243721a697e">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fc4e9b37-0360-489c-a772-5d17173eeb6f"/>
 				</reportElement>
 				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
@@ -172,7 +172,7 @@ WHERE
 				<text><![CDATA[ACCOUNT_NUMBER]]></text>
 			</staticText>
 			<staticText>
-				<reportElement stretchType="RelativeToTallestObject" x="560" y="0" width="100" height="40" uuid="97e4707b-9a9f-43a4-87e3-ebd35ad6a007">
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="531" y="0" width="99" height="40" backcolor="#E3E1E1" uuid="97e4707b-9a9f-43a4-87e3-ebd35ad6a007">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8fa3f9d5-453f-4b46-a23c-e409e7967aaf"/>
 				</reportElement>
 				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
@@ -182,7 +182,7 @@ WHERE
 				<text><![CDATA[ACCOUNT_TITLE]]></text>
 			</staticText>
 			<staticText>
-				<reportElement stretchType="RelativeToTallestObject" x="660" y="0" width="70" height="40" uuid="28166ad7-67c9-40bf-a2cc-68bb20ff70c5">
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="630" y="0" width="70" height="40" backcolor="#E3E1E1" uuid="28166ad7-67c9-40bf-a2cc-68bb20ff70c5">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="17ba01d9-2dc0-4145-836b-90154cc36a9e"/>
 				</reportElement>
 				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
@@ -192,7 +192,7 @@ WHERE
 				<text><![CDATA[ALLOCATE_DATE]]></text>
 			</staticText>
 			<staticText>
-				<reportElement stretchType="RelativeToTallestObject" x="730" y="0" width="80" height="40" uuid="a1a3d6b9-0700-46c7-944f-fbf150a62069">
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="700" y="0" width="80" height="40" backcolor="#E3E1E1" uuid="a1a3d6b9-0700-46c7-944f-fbf150a62069">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="46911f82-8466-413a-a3c9-c9fe99d4072b"/>
 				</reportElement>
 				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
@@ -206,7 +206,7 @@ WHERE
 	<detail>
 		<band height="30" splitType="Stretch">
 			<textField textAdjust="StretchHeight">
-				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="100" height="30" uuid="a66337b4-caf0-43a1-a5e7-743c5d041fc1">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="80" height="30" uuid="a66337b4-caf0-43a1-a5e7-743c5d041fc1">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="11337218-6cef-4cc7-8f9a-da1f27a6a567"/>
 				</reportElement>
 				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
@@ -216,7 +216,7 @@ WHERE
 				<textFieldExpression><![CDATA[$F{DRAWER_ID}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight">
-				<reportElement stretchType="RelativeToTallestObject" x="100" y="0" width="60" height="30" uuid="27735a97-e305-4a7d-80c5-b5b26550ad3e">
+				<reportElement stretchType="RelativeToTallestObject" x="80" y="0" width="60" height="30" uuid="27735a97-e305-4a7d-80c5-b5b26550ad3e">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88d7a972-2307-4d67-b1eb-d7c98c036999"/>
 				</reportElement>
 				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
@@ -226,7 +226,7 @@ WHERE
 				<textFieldExpression><![CDATA[$F{DRAWER_TYPE}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight">
-				<reportElement stretchType="RelativeToTallestObject" x="160" y="0" width="100" height="30" uuid="36e45e05-bee4-4dcb-bafa-5ffdfd37cf47">
+				<reportElement stretchType="RelativeToTallestObject" x="140" y="0" width="90" height="30" uuid="36e45e05-bee4-4dcb-bafa-5ffdfd37cf47">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0730ff80-6aeb-45f5-a491-38dc81e97e0c"/>
 				</reportElement>
 				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
@@ -236,7 +236,7 @@ WHERE
 				<textFieldExpression><![CDATA[$F{DRAWER_DIMENTION}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight">
-				<reportElement stretchType="RelativeToTallestObject" x="260" y="0" width="50" height="30" uuid="6b3481d8-6ae5-46b6-b15a-b0fc446fe8e8">
+				<reportElement stretchType="RelativeToTallestObject" x="230" y="0" width="50" height="30" uuid="6b3481d8-6ae5-46b6-b15a-b0fc446fe8e8">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c52abaf3-3b3a-4601-a007-d79acbf7aca2"/>
 				</reportElement>
 				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
@@ -246,7 +246,7 @@ WHERE
 				<textFieldExpression><![CDATA[$F{TOTAL_KEY}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight">
-				<reportElement stretchType="RelativeToTallestObject" x="310" y="0" width="60" height="30" uuid="eb8c4bb6-8a9b-4b46-999c-95aefb9ef566">
+				<reportElement stretchType="RelativeToTallestObject" x="280" y="0" width="60" height="30" uuid="eb8c4bb6-8a9b-4b46-999c-95aefb9ef566">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b0ec89f5-1ba3-478e-98c1-edc5cd250aaa"/>
 				</reportElement>
 				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
@@ -256,7 +256,7 @@ WHERE
 				<textFieldExpression><![CDATA[$F{CHARGE_AMOUNT}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight">
-				<reportElement stretchType="RelativeToTallestObject" x="370" y="0" width="79" height="30" uuid="93d8f02c-137e-4a4c-88d3-306be6b1b1e0">
+				<reportElement stretchType="RelativeToTallestObject" x="340" y="0" width="79" height="30" uuid="93d8f02c-137e-4a4c-88d3-306be6b1b1e0">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="881dcbc5-2671-45d3-b36b-2af2a81dc587"/>
 				</reportElement>
 				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
@@ -266,7 +266,7 @@ WHERE
 				<textFieldExpression><![CDATA[$F{VAT_AMOUNT}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight">
-				<reportElement stretchType="RelativeToTallestObject" x="449" y="0" width="111" height="30" uuid="e1388707-361b-4b8d-86d6-c5163fd0ead6">
+				<reportElement stretchType="RelativeToTallestObject" x="419" y="0" width="112" height="30" uuid="e1388707-361b-4b8d-86d6-c5163fd0ead6">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fc4e9b37-0360-489c-a772-5d17173eeb6f"/>
 				</reportElement>
 				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
@@ -276,7 +276,7 @@ WHERE
 				<textFieldExpression><![CDATA[$F{ACCOUNT_NUMBER}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight">
-				<reportElement stretchType="RelativeToTallestObject" x="560" y="0" width="100" height="30" uuid="85e94477-fca2-4934-bb61-6be0d157fd05">
+				<reportElement stretchType="RelativeToTallestObject" x="531" y="0" width="99" height="30" uuid="85e94477-fca2-4934-bb61-6be0d157fd05">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8fa3f9d5-453f-4b46-a23c-e409e7967aaf"/>
 				</reportElement>
 				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
@@ -286,7 +286,7 @@ WHERE
 				<textFieldExpression><![CDATA[$F{ACCOUNT_TITLE}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight">
-				<reportElement stretchType="RelativeToTallestObject" x="660" y="0" width="70" height="30" uuid="0a638695-576d-4393-a72f-fbb32ee795f7">
+				<reportElement stretchType="RelativeToTallestObject" x="630" y="0" width="70" height="30" uuid="0a638695-576d-4393-a72f-fbb32ee795f7">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="17ba01d9-2dc0-4145-836b-90154cc36a9e"/>
 				</reportElement>
 				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
@@ -296,7 +296,7 @@ WHERE
 				<textFieldExpression><![CDATA[$F{ALLOCATE_DATE}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight">
-				<reportElement stretchType="RelativeToTallestObject" x="730" y="0" width="80" height="30" uuid="d405c260-5ceb-4a2f-9e4c-e7f0f83980a9">
+				<reportElement stretchType="RelativeToTallestObject" x="700" y="0" width="80" height="30" uuid="d405c260-5ceb-4a2f-9e4c-e7f0f83980a9">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="46911f82-8466-413a-a3c9-c9fe99d4072b"/>
 				</reportElement>
 				<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3">
